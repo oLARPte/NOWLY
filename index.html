@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NOWLY — Don't plan your life. Just do this.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app-shell">
+
+    <header class="header">
+      <p class="wordmark">NOWLY</p>
+      <p class="tagline">Don't plan your life. Just do this.</p>
+    </header>
+
+    <section class="picker-group" data-group="time">
+      <p class="picker-label">How much time do you have?</p>
+      <div class="pill-row">
+        <button class="pill" data-value="15" aria-pressed="false">15 min</button>
+        <button class="pill" data-value="30" aria-pressed="false">30 min</button>
+        <button class="pill" data-value="60" aria-pressed="false">1 hour</button>
+        <button class="pill" data-value="120" aria-pressed="false">2+ hours</button>
+      </div>
+    </section>
+
+    <section class="picker-group" data-group="energy">
+      <p class="picker-label">How's your energy?</p>
+      <div class="pill-row">
+        <button class="pill" data-value="low" aria-pressed="false">Low</button>
+        <button class="pill" data-value="medium" aria-pressed="false">Medium</button>
+        <button class="pill" data-value="high" aria-pressed="false">High</button>
+      </div>
+    </section>
+
+    <section class="picker-group" data-group="vibe">
+      <p class="picker-label">What's the vibe?</p>
+      <div class="pill-row">
+        <button class="pill" data-value="useful" aria-pressed="false">Useful</button>
+        <button class="pill" data-value="fun" aria-pressed="false">Fun</button>
+        <button class="pill" data-value="move" aria-pressed="false">Move</button>
+        <button class="pill" data-value="social" aria-pressed="false">Social</button>
+        <button class="pill" data-value="surprise" aria-pressed="false">Surprise me</button>
+      </div>
+    </section>
+
+    <button id="get-now-btn" class="cta" disabled>Get my NOW</button>
+
+    <section id="ticket" class="ticket hidden" aria-live="polite">
+      <p class="ticket-number">TICKET #<span id="ticket-number">000</span></p>
+      <div class="ticket-tags" id="ticket-tags"></div>
+      <p class="ticket-activity" id="ticket-activity"></p>
+      <button id="again-btn" class="ticket-again">Get another</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
